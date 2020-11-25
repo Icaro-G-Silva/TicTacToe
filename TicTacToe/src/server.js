@@ -19,7 +19,7 @@ io.on('connection', socket => {
     socket.on('newUser', async (userName, serverName) => await cache.set(socket.id, `${userName}:${serverName}`))
 
     socket.on('moveToServer', async serverName => {
-        if(await cache.get(serverName) !== null) {
+        if(await user.getServer(socket.id) !== null) {
             socket.join(serverName)
             socket.to(serverName).emit('alert', `${await user.getName(socket.id)} entrou na partida`)
         }
