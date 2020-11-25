@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <title>Jogo da velha</title>
+    </head>
+    <body>
+        <div class="centered">
+            <header><h1>Jogo da velha</h1></header>
+            <img src="./Assets/TicTacToe.png" alt="TicTacToe">
+            <div class="name">
+                <input type="text" name="name" id="name" max="15" maxlength="15" placeholder="Seu nome...">
+            </div>
+            <div class="server">
+                <div class="button" id="newServer">Criar um servidor</div>
+                <div class="button" id="serverLogin">Entrar em um servidor existente</div>
+            </div>
+        </div>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="./script.js"></script>
+    </body>
+</html>
